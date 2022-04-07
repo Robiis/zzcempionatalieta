@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>ZZ Čempionāta vārdu meklētājs</H1>
+    <p>Cik burtu ir tavā vārdā (ieskaitot atstarpes)?</p>
+    <input type="text" id="box" placeholder="Raksti burtu skaitu ciparos">
+    <button onclick="press(document.querySelector('#box').value)">Atrast vārdus</button>
+    <p id="text"></p>
+    <script>
+        lst = ["Karogs",
+        "Brīvība",
+        "Ticība",
+        "Cieņa",
+        "Grāmata",
+        "Vēja enerğija",
+        "Sports",
+        "Himna",
+        "Atbalsts daba",
+        "Mežs",
+        "Pateicība",
+        "Zī un zē",
+        "Apskāviens", 
+        "Uzvara",
+        "Veselība",
+        "Tiesības",
+        "Cilvēktiesības",
+        "Palīdzība",
+        "Skolotājs",
+        "Izglītība",
+        "Ūdens",
+        "Gleznošana",
+        "Komunikācija",
+        "Atjautība",
+        "Klases spēks",
+        "Lietus meži",
+        "Radošums",
+        "Aizraušanās",
+        "Pašizaugsme",
+        "Prieks",
+        "Pienākumi",
+        "Iestāšanās par vērtībām",
+        "Vienmēr gatavi",
+        "Dabas aizsardzība",
+        "Klase",
+        "Fināls",
+        "Depozīta sistēma",
+        "Erudīcija",
+        "Pastaigas" ,
+        "Seko sirdsbalsij",
+        "Politika",
+        "Skriešana",
+        "Iedvesma",
+        "Vienotība",
+        "Pusfināla uzdevums",
+        "Līderis",
+        "Sigulda",
+        "Iecietība",
+        "Spēks",
+        "Sacīkstes",
+        "Atbalsts",
+        "Hobijs",
+        "Pašpārliecība",
+        "Panākumi",
+        "Šķirošana",
+        "Zinātkāre",
+        "Saliedēta komanda",
+        "Zelta zivtiņas čempionāta pilsētiņa",
+        "Dzimumu līdztiesība",
+        "Rokasspiediens"]
+
+        function press(num) {
+            wordlst = []
+            lst.forEach(function(word) { 
+                if (word.toLowerCase().length === parseInt(num)) {
+                    wordlst.push(word)
+                }
+            })
+            document.querySelector("#text").innerHTML = wordlst
+            if (wordlst.length === 0) {
+                document.querySelector("#text").innerHTML = "Mūsu sarakstā nav vārdu ar tādu burtu skaitu"
+            }
+        }       
+    </script>
+</body>
+</html>
